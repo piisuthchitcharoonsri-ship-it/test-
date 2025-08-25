@@ -1,4 +1,4 @@
-<index.html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
@@ -65,62 +65,5 @@
   </div>
 
   <a href="cart.html" class="cart-link">ไปที่ตะกร้า</a>
-</body>
-</html>
-<cart.html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ตะกร้าสินค้า</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 { color: #6a5acd; }
-    .item {
-      background: #fff;
-      border: 2px solid #87cefa;
-      border-radius: 12px;
-      padding: 15px;
-      margin: 10px auto;
-      max-width: 300px;
-    }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      background: #ff6f91;
-      padding: 10px 15px;
-      border-radius: 8px;
-      color: white;
-      text-decoration: none;
-    }
-  </style>
-  <script>
-    function loadCart() {
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      let container = document.getElementById("cart-items");
-      if (cart.length === 0) {
-        container.innerHTML = "<p>ตะกร้าว่างเปล่า</p>";
-      } else {
-        cart.forEach(item => {
-          let div = document.createElement("div");
-          div.className = "item";
-          div.textContent = item;
-          container.appendChild(div);
-        });
-      }
-    }
-    window.onload = loadCart;
-  </script>
-</head>
-<body>
-  <h1>ตะกร้าสินค้า</h1>
-  <div id="cart-items"></div>
-  <a href="index.html">กลับไปหน้าสินค้า</a>
 </body>
 </html>
